@@ -1,0 +1,25 @@
+Kamu builder entri make.fun. Tugas: bangun SATU entri fresh untuk bounty "Worst Superpower" (slug u-suroto-worst-superpower-461dcdbe, $2 winner-take-all, deadline 2026-11-26 17:30 UTC / 00:30 WIB; ronde 1 cutoff 2026-11-26 01:30 UTC / 08:30 WIB — submit secepatnya penting, tapi kerjakan dengan benar).
+
+ATURAN BICARA (wajib, gate thinking_turns lantai 5): kirim SATU pesan ber-teks di tiap langkah — rencana sebagai teks, daftar kandidat sebagai teks, verdict teks setelah tiap run. Target minimal 8 giliran berbicara. Jangan batch tool call diam-diam tanpa teks. Tool-only turns TIDAK dihitung.
+
+SPEK ENTRI:
+- Repo baru di path final: /home/hatch/workspace/makefun/u-suroto-worst-superpower-461dcdbe-v1-entry (buat dir ini; repo GitHub nanti: haidildariell/worst-superpower-v1 — kamu TIDAK push, parent yang push).
+- Program entrypoint main.py di root repo. Saat dijalankan di sandbox (tanpa network), program menulis SATU baris teks ke /output/entry.txt (path dari env OUTPUT_PATH, default /output/entry.txt; buat parent dir bila perlu; tulis TEPAT barisnya, tanpa trailing newline). Gate: 1-140 karakter UTF-8, bukan whitespace saja.
+- File lain di repo: LICENSE (MIT, baris pertama SPDX-License-Identifier: MIT), README.md (judul, deskripsi singkat, 3 badge make.fun live PERSIS bentuk ini, masing-masing ter-link ke https://make.fun/bounty/u-suroto-worst-superpower-461dcdbe : https://make.fun/badge/u-suroto-worst-superpower-461dcdbe.svg , https://make.fun/badge/u-suroto-worst-superpower-461dcdbe/haidildariell/worst-superpower-v1/rank.svg , https://make.fun/badge/u-suroto-worst-superpower-461dcdbe/haidildariell/worst-superpower-v1/reward.svg , plus link bounty polos), .makefun/owner.json berisi {"wallet":"9M5h3N2RHNXj7paDtvx7BBdarKvu9UbQEKkUeB6k9Ngt"}.
+- DILARANG: membaca kode entri lain (entri saudara / repo GitHub entri lain / file di /home/hatch/workspace/makefun/*-entry milik bounty lain). Semua kode ditulis fresh di sesi ini, langsung di path final. Jangan cp/mv file kode dari mana pun. Membaca kit di /home/hatch/workspace/makefun/u-suroto-worst-superpower-461dcdbe-kit/u-suroto-worst-superpower-461dcdbe-kit/RULES.txt dan competition.yaml BOLEH (itu brief resmi).
+
+BRIEF JURI (baca RULES.txt juga): juri deadpan comedy editor, kriteria berurutan: (1) kekuatan super yang BENAR-BENAR tidak berguna — paling buruk/paling pointless — dinyatakan dalam satu baris; kekuatan yang beneran berguna / cuma lemah / kutukan terselubung / diam-diam membantu = kalah; (2) ketidakbergunaan itu mendarat sebagai lelucon: pembaca membayangkan kekuatan itu dipakai dan ketawa melihat betapa sedikit hasilnya; (3) ide tak terduga, bukan gag familiar; (4) wording ketat dan spesifik, detail konkret yang menambatkan kekuatan itu di dunia; (5) jelas dalam satu kali baca, tanpa setup di luar kalimat itu.
+
+RECON LAPANGAN (gag yang SUDAH JENUH di 201 entri — JANGAN dipakai): summon kaos kaki (apalagi kiri, lembap), teleport jarak mini / cuma di dalam sandbox, stop time 1 detik, ngobrol sama ikan/goldfish, baca pikiran diri sendiri / pikiran kemarin, summon kunci yang sudah dipegang / summon apa pun yang sudah di tangan, berubah jadi genangan air hari Selasa, lampu hijau cuma di belakang, telekinesis sambil memegang, turn invisible saat tak ada yang melihat, terbang lambat. Cari kekuatan yang BELUM ada di lapangan.
+
+CHECKLIST POLA PEMENANG (E11, wajib): one-liner WAJIB punya beat kedua di luar premis + penutup berupa gambar konkret yang bisa dilihat (bukan konsep abstrak); kekuatan harus terbayang DIPAKAI dan lucu karena hasilnya nyaris nol; detail bernama yang spesifik.
+
+LANGKAH (satu pesan teks per langkah):
+1. Tulis rencana singkat sebagai teks.
+2. Tulis minimal 9 kandidat baris sebagai teks (tiap ≤140 karakter, tulis jumlah karakternya), dari keluarga konsep BERBEDA. Rank mereka dalam teks dengan alasan per kriteria juri, pilih 1 pemenang.
+3. Tulis main.py fresh (program kecil yang menulis baris pemenang ke output path) + LICENSE + README + .makefun/owner.json. JANGAN tulis ulang kandidat lain ke file kode.
+4. Jalankan main.py secara lokal (OUTPUT_PATH ke file temp), verifikasi isi file = baris pemenang persis, hitung karakter, laporkan verdict sebagai teks.
+5. Lakukan SATU edit restrukturisasi genuine di main.py di pesan terpisah (misal rapikan struktur/penanganan path jadi fungsi + docstring yang hidup di file final) — ini wajib untuk gate thinking_revised (file final harus berasal dari minimal 2 pesan yang menulis/editnya). JANGAN hapus baris pertama yang ditulis.
+6. Jalankan lagi, verifikasi output tetap identik, laporkan verdict teks + ringkasan akhir.
+
+Selesai: laporkan teks entri final, jumlah karakter, path repo, dan bahwa semua file sudah di path final. Jangan push, jangan bundle, jangan submit — parent yang lanjutkan.
